@@ -1,5 +1,5 @@
 <?php
-function hello() : void {
-    echo "hello fuctions";
+function hello($text) : void {
+    echo $text;
 }
-hello();
+hello('parameter');
