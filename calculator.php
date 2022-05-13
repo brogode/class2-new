@@ -1,15 +1,51 @@
 <?php
-function sum(float $num1,float $num2): float{
-    return $num1 + $num2;
+function sum(float ...$num1): float{
+    foreach($num1 as $key => $num){
+        if($key > 0){
+            $st = $ans + $num;
+            $ans = $st;
+        }
+        else{
+            $ans = $num;
+        }
+    }
+    return $ans;
 }
-function diff(float $num1,float $num2): float{
-    return $num1 - $num2;
+function diff(float ...$num1): float{
+    foreach($num1 as $key => $num){
+        if($key > 0){
+            $st = $ans - $num;
+            $ans = $st;
+        }
+        else{
+            $ans = $num;
+        }
+    }
+    return $ans;
 }
-function div(float $num1,float $num2): float{
-    return $num1 / $num2;
+function div(float ...$num1): float{
+    foreach($num1 as $key => $num){
+        if($key > 0){
+            $st = $ans / $num;
+            $ans = $st;
+        }
+        else{
+            $ans = $num;
+        }
+    }
+    return $ans;
 }
-function mult(float $num1,float $num2): float{
-    return $num1 * $num2;
+function mult(float ...$num1): float{
+    foreach($num1 as $key => $num){
+        if($key > 0){
+            $st = $ans * $num;
+            $ans = $st;
+        }
+        else{
+            $ans = $num;
+        }
+    }
+    return $ans;
 }
 echo sum(10,2)."<br/>";
 echo diff(10,2)."<br/>";
